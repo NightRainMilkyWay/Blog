@@ -1,1 +1,0 @@
-import{_ as t}from"./app-00d2c95e.js";const i=async()=>{try{const{pageviewCount:e}=await t(()=>import("./app-00d2c95e.js").then(r=>r.ai),[]);return e({serverURL:"https://NightRainMilkyWay.cn"})}catch{console.error("@waline/client is not installed!");return}};export{i as updatePageview};
