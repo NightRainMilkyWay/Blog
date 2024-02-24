@@ -1,4 +1,4 @@
-import{a as p}from"./axios-a342f982.js";import{f as v,k as x,L as _,m as k,r as y,o as g,M as E,w as H,a as T}from"./app-2e806ad5.js";import{_ as w}from"./plugin-vue_export-helper-c27b6911.js";const B=T("div",{class:"none"},"一言插件",-1),I=v({__name:"HeroHitokoto",setup(C){const f=o=>{const t=window;clearInterval(t.Timer);const n=document.getElementsByClassName("vp-blog-hero-description");if(n.length>0){const d=n[0];d.id="hotWord"}const m=document.getElementById("hotWord");if(!m)return;m.innerHTML=`
+import{a as p}from"./axios-a342f982.js";import{f as v,k as x,L as _,m as k,r as y,o as g,M as E,w as H,a as T}from"./app-00d2c95e.js";import{_ as w}from"./plugin-vue_export-helper-c27b6911.js";const B=T("div",{class:"none"},"一言插件",-1),I=v({__name:"HeroHitokoto",setup(C){const f=o=>{const t=window;clearInterval(t.Timer);const n=document.getElementsByClassName("vp-blog-hero-description");if(n.length>0){const d=n[0];d.id="hotWord"}const m=document.getElementById("hotWord");if(!m)return;m.innerHTML=`
 <div class="word">
   <div class="left">『</div>
     <span id="hitokoto_text"></span>
