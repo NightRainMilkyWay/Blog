@@ -1,0 +1,1 @@
+import{_ as t}from"./plugin-vue_export-helper-c27b6911.js";import{o as a,c as o,a as e,b as r}from"./app-669aaa3e.js";const c={},s=e("h1",{id:"关于我",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#关于我","aria-hidden":"true"},"#"),r(" 关于我")],-1),n=[s];function _(d,i){return a(),o("div",null,n)}const m=t(c,[["render",_],["__file","me.html.vue"]]);export{m as default};

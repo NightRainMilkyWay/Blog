@@ -1,0 +1,5 @@
+
+User-agent:*
+Disallow:
+
+Sitemap: https://NightRainMilkyWay.cn/sitemap.xml
