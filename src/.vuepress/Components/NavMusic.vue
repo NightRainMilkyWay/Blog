@@ -117,7 +117,7 @@ onMounted(() => {
 
   axios({
     method: 'get',
-    url: '//file.mo7.cc/music/list.json',
+    url: 'https://NightRainMilkyWay.cn/musiclist.json',
     params: {},
   }).then((response) => {
     var listData = response.data;
