@@ -1,0 +1,217 @@
+// place your custom styles here
+.none {
+  width: 0;
+  height: 0;
+  user-select: none;
+  pointer-events: none;
+  overflow: hidden;
+  display: none;
+}
+
+@font-face {
+  font-family: zh-cn-min;
+  src: url('./font/zh-cn-min.woff');
+}
+
+
+// 底部信息的样式
+.vp-footer-wrapper {
+  .vp-footer {
+    display: flex;
+  }
+
+  .footer-icp {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    img {
+      width: 14px;
+      margin-right: 4px;
+    }
+  }
+  .footer-about {
+    padding: 2px 3px;
+    border-radius: 3px;
+    position: relative;
+    color: #fff;
+    &:hover {
+      background-color: rgba($color: #0c7bf4, $alpha: 0.8);
+    }
+  }
+}
+
+// 页面过渡动画设置
+body {
+  transition: all 0.8s;
+}
+
+// 首页边栏信息按钮的颜色
+.vp-blog-type-button .icon-wrapper.active {
+  color: #fff;
+}
+
+
+.vp-blog-hero-title {
+  font-size: 3.8rem;
+  font-family: 'mo7_font';
+}
+
+
+
+.vp-article-item {
+  border-radius: 45px; /* 添加圆角 */
+  transform: scale(0.97); /* 将大小缩小至原始大小的 90% */
+  transform-origin: top center; /* 根据需要调整，以适应你的布局 */
+}
+
+.vp-blog-infos {
+  margin: 8px auto;
+  padding: 8px 16px;
+  
+
+  .vp-page & {
+    border-radius: 45px;
+    background: var(--bg-color-float);
+    box-shadow: 0 1px 3px 1px var(--card-shadow);
+    transition:
+      background var(--color-transition),
+      box-shadow var(--color-transition);
+
+    &:hover {
+      box-shadow: 0 2px 6px 2px var(--card-shadow);
+    }
+  }
+
+  .timeline-list-wrapper {
+    .content {
+      max-height: 60vh;
+    }
+  }
+}
+
+.vp-blog-info-wrapper {
+  .vp-sidebar & {
+    // hide blogger info in sidebar
+    .vp-blogger-info {
+      display: none;
+    }
+  }
+
+  .vp-page & {
+    position: sticky;
+    top: calc(var(--navbar-height) + 0.75rem);
+
+    flex: 0 0 300px;
+
+    box-sizing: border-box;
+
+    width: 300px;
+    height: auto;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    margin-inline-start: 1rem;
+
+    transition: all 0.3s;
+
+
+    .vp-blogger-info {
+      margin-bottom: 16px;
+      padding: 8px 0;
+      border-radius: 50px;
+      box-shadow: 0 1px 3px 1px var(--card-shadow);
+
+      &:hover {
+        box-shadow: 0 2px 6px 2px var(--card-shadow);
+      }
+    }
+  }
+}
+
+.vp-project-card {
+   border-radius: 30px;
+
+}
+.vp-article-cover {
+  position: relative;
+  border-top-left-radius: 30px; /* 上左圆角 */
+  border-top-right-radius: 30px; /* 上右圆角 */
+}
+
+.vp-article-cover:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* 可以调整这里的百分比来控制渐变的高度 */
+  background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  z-index: 1; /* 确保这个值能让伪元素覆盖在图片上方 */
+  
+}
+
+
+/* 当页面主题为'light'时，以下样式生效 */
+html[data-theme=light] {
+  body {
+
+    /* 文章项目的样式定义 */
+    .article-item {
+      /* 文章的背景颜色，半透明 */
+      .article {
+        background-color: rgba(255, 255, 255, 0.9) !important;
+      }
+    }
+
+    /* 页面的背景颜色，完全透明 */
+    .page {
+      background-color: rgba(255, 255, 255, 0) !important;
+    }
+
+    /* 博主信息、博客信息列表、文章链接、项目和分页列表的背景色 */
+    .blogger-info,
+    .blog-info-list,
+    .article>a,
+    .project,
+    .pagination-list {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* 侧边栏的背景色和模糊效果 */
+    .sidebar {
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: saturate(150%) blur(1px);
+    }
+
+    /* 页脚包装器的背景色 */
+    .footer-wrapper {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* 页面导航的顶部边框样式 */
+    .page-nav {
+      border-top: 1px solid rgb(194, 194, 194);
+    }
+
+    /* 页面标题、内容、元数据、导航和评论区域的背景色 */
+    .page-title,
+    .theme-hope-content,
+    .page-meta,
+    .page-nav,
+    .giscus-wrapper {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* 主题内容区域的字体和背景样式 */
+    .theme-hope-content {
+      /* 优化字体样式 */
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+      /* 背景的线性渐变效果，形成网格状的图案 */
+      background-image: linear-gradient(0deg, transparent 24%, rgba(216, 216, 216, 0.329) 25%, rgba(233, 231, 231, 0.05) 26%, transparent 27%, transparent 74%, hsla(0, 5.2%, 81%, .185) 75%, rgba(180, 176, 176, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(204, 196, 196, .226) 25%, hsla(0, 4%, 66.1%, .05) 26%, transparent 27%, transparent 74%, hsla(0, 5.2%, 81%, .185) 75%, rgba(180, 176, 176, .05) 76%, transparent 77%, transparent);
+      /* 背景的尺寸，形成重复的网格图案 */
+      background-size: 50px 50px;
+    }
+  }
+}
+
